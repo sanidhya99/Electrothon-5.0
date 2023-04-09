@@ -5,7 +5,7 @@ import pyttsx3
 from gtts import gTTS
 
 # Initialize the pytesseract OCR engine
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files (x86)\Tesseract-OCR/tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'C:\Users\RYZEN5_8GB_512GBSSD\Desktop\MySQL\Tesseract-OCR\Tesseract-OCR\tesseract.exe'
 
 # Initialize the pyttsx3 text-to-speech engine
 engine = pyttsx3.init()
@@ -35,6 +35,7 @@ while True:
     # Speak the extracted text
     language = 'en'
     myobj = gTTS(text=text, lang=language, slow=False)
+    engine.say(text)
     engine.runAndWait()
 
     # Display the frame with the detected text
